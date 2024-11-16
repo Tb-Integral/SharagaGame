@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|e:\\mareatan\\github\\sharagagame\\sharaga_game\\assets\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|e:\\mareatan\\github\\sharagagame\\sharaga_game\\assets\\scripts\\bedtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\bedtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\perehodik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\perehodik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\buttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\bed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,37 +43,85 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "bedTrigger.cs",
+              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\bedTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\bedTrigger.cs",
+              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\bedTrigger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\bedTrigger.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T22:26:44.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "hero.cs",
+              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\hero.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\hero.cs",
+              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\hero.cs",
+              "RelativeToolTip": "Assets\\Scripts\\hero.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T20:13:36.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "perehodik.cs",
+              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\perehodik.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\perehodik.cs",
+              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\perehodik.cs",
+              "RelativeToolTip": "Assets\\Scripts\\perehodik.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T14:32:39.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "buttons.cs",
+              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\buttons.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\buttons.cs",
+              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\buttons.cs",
+              "RelativeToolTip": "Assets\\Scripts\\buttons.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T20:51:40.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "menu.cs",
               "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\menu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\menu.cs",
               "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\menu.cs",
               "RelativeToolTip": "Assets\\Scripts\\menu.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:12:56.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T20:12:56.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "bed.cs",
               "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\bed.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\bed.cs",
               "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\bed.cs",
               "RelativeToolTip": "Assets\\Scripts\\bed.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T19:53:19.725Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "dialog.cs",
               "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\dialog.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\dialog.cs",
               "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\dialog.cs",
               "RelativeToolTip": "Assets\\Scripts\\dialog.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T19:41:48.235Z"
             }
