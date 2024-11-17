@@ -15,6 +15,7 @@ public class Hero : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         bool IsWalking = false;
 
         if (Input.GetKey(KeyCode.D) && transform.position.x < 6f)
