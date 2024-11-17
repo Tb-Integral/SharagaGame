@@ -18,7 +18,7 @@ public class Hero : MonoBehaviour
 
         bool IsWalking = false;
 
-        if (Input.GetKey(KeyCode.D) && transform.position.x < 6f)
+        if (Input.GetKey(KeyCode.D) && transform.position.x < 7f)
         {
             
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
@@ -29,7 +29,7 @@ public class Hero : MonoBehaviour
             IsWalking = true;
         }
 
-        if (Input.GetKey(KeyCode.A) && transform.position.x > -6f)
+        if (Input.GetKey(KeyCode.A) && transform.position.x > -7f)
         {
             transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
 
