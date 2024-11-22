@@ -18,16 +18,16 @@ public class cam : MonoBehaviour
 
         if (player.position.x > 0)
         {
-            if (player.position.x < 63f) 
+            if (player.position.x < 143.5f) 
             temp.x = player.position.x;
-            else temp.x = 63f;
+            else temp.x = 143.5f;
         }
         else
         {
             temp.x = 0;
         }
 
-        temp.y = player.position.y + 0.8f;
+        temp.y = 0f;
 
         transform.position = temp;
     }
