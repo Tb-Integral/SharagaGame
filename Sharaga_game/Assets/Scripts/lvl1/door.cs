@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Door : MonoBehaviour
 {
     [SerializeField] private GameObject hero;
+    [SerializeField] private head monster;
 
     public Image blackimg; // Привязать черное изображение
     public float fadeDuration = 2f;
@@ -38,7 +39,6 @@ public class Door : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("Stay");
         if (collision.gameObject == hero && Input.GetKey(KeyCode.Space))
         {
             StartCoroutine(FadeOutBlack());
@@ -73,6 +73,11 @@ public class Door : MonoBehaviour
 
     private IEnumerator FadeOutBlack()
     {
+        //if (Progress.Instance != null)
+        //{
+        //    Progress.Instance.Ch_lvl1(); // Активируем уровень через Singleton
+        //}
+        monster.speed = 0;
         float timer = 0f;
         Color color = blackimg.color;
 

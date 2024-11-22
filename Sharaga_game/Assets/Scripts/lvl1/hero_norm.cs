@@ -14,6 +14,7 @@ public class Hero_norm : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     private bool isGrounded;
+    public bool CanMove = true;
 
     private void Start()
     {
@@ -29,99 +30,101 @@ public class Hero_norm : MonoBehaviour
         bool IsRunning = false;
         bool IsSliding = false;
 
-
-        if (Input.GetKey(KeyCode.D) && transform.position.x < 152f)
+        if (CanMove)
         {
-
-            stand.enabled = true;
-            down.enabled = false;
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.D) && transform.position.x < 152f)
             {
-                IsRunning = true;
-                transform.position += new Vector3(speed, 0, 0) * Time.deltaTime * 2;
 
+                stand.enabled = true;
+                down.enabled = false;
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    IsRunning = true;
+                    transform.position += new Vector3(speed, 0, 0) * Time.deltaTime * 2;
+
+                }
+                else
+                {
+                    transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
+                    IsWalking = true;
+                }
+
+                if (Input.GetKey(KeyCode.S))
+                {
+                    IsSliding = true;
+                    IsWalking = false;
+                    IsRunning = false;
+
+                    stand.enabled = false;
+                    down.enabled = true;
+                }
+
+                // ”становить поворот вправо, сохран€€ текущие y и z
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+
+            if (Input.GetKey(KeyCode.A) && transform.position.x > -8f)
+            {
+                stand.enabled = true;
+                down.enabled = false;
+
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    IsRunning = true;
+                    transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime * 2;
+                }
+                else
+                {
+                    transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
+
+                    IsWalking = true;
+                }
+
+                if (Input.GetKey(KeyCode.S))
+                {
+                    IsSliding = true;
+                    IsWalking = false;
+                    IsRunning = false;
+
+                    stand.enabled = false;
+                    down.enabled = true;
+                }
+
+                // ”становить поворот влево, сохран€€ текущие y и z
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, groundLayer);
+
+            float rayLength = 2f;
+            Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - 0.5f);
+
+            // Raycast без сло€ дл€ отладки
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, groundLayer);
+
+            if (hit.collider != null)
+            {
+                isGrounded = true;
             }
             else
             {
-                transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
-                IsWalking = true;
+                isGrounded = false;
+                IsJumping = true;
             }
 
-            if (Input.GetKey(KeyCode.S))
+            // ѕрыжок
+            if (Input.GetKeyDown(KeyCode.W) && isGrounded)
             {
-                IsSliding = true;
-                IsWalking = false;
-                IsRunning = false;
-
-                stand.enabled = false;
-                down.enabled = true;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                IsJumping = true;
             }
-
-            // ”становить поворот вправо, сохран€€ текущие y и z
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
-
-        if (Input.GetKey(KeyCode.A) && transform.position.x > -8f)
-        {
-            stand.enabled = true;
-            down.enabled = false;
-
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                IsRunning = true;
-                transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime * 2;
-            }
-            else
-            {
-                transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
-
-                IsWalking = true;
-            }
-
-            if (Input.GetKey(KeyCode.S))
-            {
-                IsSliding = true;
-                IsWalking = false;
-                IsRunning = false;
-
-                stand.enabled = false;
-                down.enabled = true;
-            }
-
-            // ”становить поворот влево, сохран€€ текущие y и z
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, groundLayer);
-
-        float rayLength = 2f;
-        Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - 0.5f);
-
-        // Raycast без сло€ дл€ отладки
-        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, groundLayer);
-
-        if (hit.collider != null)
-        {
-            isGrounded = true;
-        }
-        else
-        {
-            isGrounded = false;
-            IsJumping = true;
-        }
-
-        // ѕрыжок
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            IsJumping = true;
-        }
+        
 
         // ѕередаем значение параметру анимации
         anim.SetBool("IsWalking", IsWalking);
         anim.SetBool("IsJumping", IsJumping);
         anim.SetBool("IsRunning", IsRunning);
         anim.SetBool("IsSliding", IsSliding);
-
     }
 
 }

@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class door3 : MonoBehaviour
 {
+    [SerializeField] private GameObject door_act;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        door_act.SetActive(true);
         //дверь подсвечивается
     }
 
@@ -21,6 +23,7 @@ public class door3 : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        door_act.SetActive(false);
         //дверь обратно
     }
 }
