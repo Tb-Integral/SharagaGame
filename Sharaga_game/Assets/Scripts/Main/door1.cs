@@ -6,10 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class door1 : MonoBehaviour
 {
-    [SerializeField] private GameObject door_act;
+    [SerializeField] private GameObject dialog;
+    [SerializeField] private SpriteRenderer door_act;
+    [SerializeField] private BoxCollider2D _collider;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        door_act.SetActive(true);
+        _collider.enabled = true;
+        Color color = door_act.color;
+        color.a = 1f;
+        door_act.color = color;
+
         Debug.Log("enter");
     }
 
@@ -18,13 +24,24 @@ public class door1 : MonoBehaviour
         Debug.Log("in");
         if (Input.GetKey(KeyCode.Space))
         {
-            SceneManager.LoadScene("lvl1");
+            Debug.Log(Progress.Instance.lvl1_check);
+            if (!Progress.Instance.lvl1_check)
+            {
+                SceneManager.LoadScene("lvl1");
+            }
+            else
+            {
+                dialog.SetActive(true);
+                _collider.enabled = false;
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("exit");
-        door_act.SetActive(false);
+        Color color = door_act.color;
+        color.a = 0f;
+        door_act.color = color;
     }
 }

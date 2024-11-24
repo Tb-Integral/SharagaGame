@@ -6,22 +6,38 @@ using UnityEngine.SceneManagement;
 
 public class door2 : MonoBehaviour
 {
-    [SerializeField] private GameObject door_act;
+    [SerializeField] private SpriteRenderer door_act;
+    [SerializeField] private GameObject dialog;
+    [SerializeField] private BoxCollider2D _collider;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        door_act.SetActive(true);
+        _collider.enabled = true;
+        Color color = door_act.color;
+        color.a = 1f;
+        door_act.color = color;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
-            SceneManager.LoadScene("lvl2");
+            if (!Progress.Instance.lvl2_check)
+            {
+                SceneManager.LoadScene("lvl2");
+            }
+            else
+            {
+                dialog.SetActive(true);
+                _collider.enabled = false;
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        door_act.SetActive(false);
+        Color color = door_act.color;
+        color.a = 0f;
+        door_act.color = color;
     }
 }

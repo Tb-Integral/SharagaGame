@@ -10,6 +10,7 @@ public class bed_button : MonoBehaviour
     [SerializeField] private GameObject img1;
     [SerializeField] private GameObject img2;
     [SerializeField] private GameObject hero;
+    [SerializeField] private GameObject dialog;
 
     public Image whiteimg; // Привязать белое изображение
     public Image blackimg; // Привязать черное изображение
@@ -76,6 +77,7 @@ public class bed_button : MonoBehaviour
             blackimg.color = color;
             yield return null;
         }
+        dialog.SetActive(true);
 
         color.a = 0f; // Полностью прозрачный
         blackimg.color = color;

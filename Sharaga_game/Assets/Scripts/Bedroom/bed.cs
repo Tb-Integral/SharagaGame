@@ -28,15 +28,6 @@ public class Bed : MonoBehaviour
         StartCoroutine(FadeInBlack());
     }
 
-    public void Krovat()
-    {
-        img2.SetActive(true);
-        img1.SetActive(false);
-
-        // Ќачать затухание белого изображени€
-        StartCoroutine(FadeOutWhite());
-    }
-
     private IEnumerator FadeInBlack()
     {
         float timer = 0f;

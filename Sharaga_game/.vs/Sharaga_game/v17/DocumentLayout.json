@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|e:\\mareatan\\github\\sharagagame\\sharaga_game\\assets\\scripts\\main\\progress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\main\\progress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|e:\\mareatan\\github\\sharagagame\\sharaga_game\\assets\\scripts\\lvl1\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lvl1\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|e:\\mareatan\\github\\sharagagame\\sharaga_game\\assets\\scripts\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\main\\door1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\main\\door1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\bedroom\\bed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bedroom\\bed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\main\\progress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\main\\progress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\lvl1\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lvl1\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\main\\door2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\main\\door3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\main\\door3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\bedroom\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bedroom\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\assets\\scripts\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8E635BA-34C3-AF38-83E8-E7EE04D9E568}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,88 +43,91 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "dialog.cs",
+              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\dialog.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\dialog.cs",
+              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\dialog.cs",
+              "RelativeToolTip": "Assets\\Scripts\\dialog.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T19:01:09.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "door1.cs",
+              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\door1.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Main\\door1.cs",
+              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\door1.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Main\\door1.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T19:03:42.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "bed.cs",
+              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Bedroom\\bed.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bedroom\\bed.cs",
+              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Bedroom\\bed.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bedroom\\bed.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T15:33:00.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "progress.cs",
               "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\progress.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Main\\progress.cs",
               "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\progress.cs",
               "RelativeToolTip": "Assets\\Scripts\\Main\\progress.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T20:51:36.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "door.cs",
               "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\lvl1\\door.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\lvl1\\door.cs",
               "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\lvl1\\door.cs",
               "RelativeToolTip": "Assets\\Scripts\\lvl1\\door.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAcwE4AAAALAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T20:50:47.715Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "door3.cs",
-              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\door3.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Main\\door3.cs",
-              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\door3.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Main\\door3.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T20:13:04.277Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "door2.cs",
               "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\door2.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Main\\door2.cs",
               "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\door2.cs",
               "RelativeToolTip": "Assets\\Scripts\\Main\\door2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAxAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBgAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T20:13:02.487Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "door1.cs",
-              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\door1.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Main\\door1.cs",
-              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\door1.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Main\\door1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T19:03:42.285Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "dialog.cs",
-              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Bedroom\\dialog.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Bedroom\\dialog.cs",
-              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Bedroom\\dialog.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Bedroom\\dialog.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T18:53:03.856Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "hero.cs",
-              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\hero.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\hero.cs",
-              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\hero.cs",
-              "RelativeToolTip": "Assets\\Scripts\\hero.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAJAAAA",
+              "Title": "door3.cs",
+              "DocumentMoniker": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\door3.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Main\\door3.cs",
+              "ToolTip": "E:\\Mareatan\\GitHub\\SharagaGame\\Sharaga_game\\Assets\\Scripts\\Main\\door3.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Main\\door3.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T20:13:36.195Z"
+              "WhenOpened": "2024-11-22T20:13:04.277Z"
             }
           ]
         }

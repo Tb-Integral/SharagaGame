@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,8 +15,14 @@ public class Door : MonoBehaviour
 
     private SpriteRenderer spriteRenderer; // Для работы с цветом объекта
 
+    GameObject progress;
+    Progress _progress;
+
     void Start()
     {
+        progress = GameObject.Find("progress manager");
+        _progress = progress.GetComponent<Progress>();
+
         // Получаем SpriteRenderer объекта, на котором находится этот скрипт
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -73,10 +80,9 @@ public class Door : MonoBehaviour
 
     private IEnumerator FadeOutBlack()
     {
-        //if (Progress.Instance != null)
-        //{
-        //    Progress.Instance.Ch_lvl1(); // Активируем уровень через Singleton
-        //}
+        Debug.Log("До изменения: lvl1_check = " + _progress.lvl1_check);
+        _progress.lvl1_check = true;
+        Debug.Log("После изменения: lvl1_check = " + _progress.lvl1_check);
         monster.speed = 0;
         float timer = 0f;
         Color color = blackimg.color;
