@@ -1,16 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class perehodik : MonoBehaviour
 {
+    [SerializeField] private GameObject dialog;
+    [SerializeField] private Hero hero;
+
     public Image fadeImage; // Привязать белое изображение
     public float fadeDuration = 2f;
 
     private void Start()
     {
         // Устанавливаем начальный цвет (полностью белый)
+        if (Progress.Instance.first)
+        {
+            hero.enabled = false;
+        }
         Color color = fadeImage.color;
         color.a = 1f;
         fadeImage.color = color;
@@ -18,8 +26,6 @@ public class perehodik : MonoBehaviour
         // Запускаем затухание
         StartCoroutine(FadeOut());
     }
-
-
 
     private IEnumerator FadeOut()
     {
@@ -35,5 +41,10 @@ public class perehodik : MonoBehaviour
         }
         color.a = 0f; // Полностью прозрачный экран
         fadeImage.color = color;
+
+        if (Progress.Instance.first)
+        {
+            dialog.SetActive(true);
+        }
     }
 }

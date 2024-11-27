@@ -82,6 +82,7 @@ public class Door : MonoBehaviour
     {
         Debug.Log("До изменения: lvl1_check = " + _progress.lvl1_check);
         _progress.lvl1_check = true;
+        _progress.first = false;
         Debug.Log("После изменения: lvl1_check = " + _progress.lvl1_check);
         monster.speed = 0;
         float timer = 0f;

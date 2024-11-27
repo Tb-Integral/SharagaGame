@@ -13,6 +13,7 @@ public class Progress : MonoBehaviour
     public bool lvl1_check = false;
     public bool lvl2_check = false;
     public bool lvl3_check = false;
+    public bool first = true;
 
     void Awake()
     {

@@ -40,7 +40,7 @@ public class bed_button : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Color newColor = targetImage.color;
-        newColor.a = 1f;
+        newColor = Color.gray;
         targetImage.color = newColor;
     }
 
@@ -61,7 +61,7 @@ public class bed_button : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Color newColor = targetImage.color;
-        newColor.a = 0f;
+        newColor = Color.white;
         targetImage.color = newColor;
     }
 
@@ -86,7 +86,7 @@ public class bed_button : MonoBehaviour
     private IEnumerator FadeOutWhite()
     {
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         float timer = 0f;
         Color color = whiteimg.color;
 
