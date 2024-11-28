@@ -4,30 +4,38 @@ using UnityEngine;
 
 public class cam : MonoBehaviour
 {
-    private Transform player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-    }
+    [SerializeField] private float xMax = 143.5f;
+    [SerializeField] private float xMin = 0f;
+    [SerializeField] private float yMax = 0f;
+    [SerializeField] private float yMin = 0f;
+    [SerializeField] private Transform player;
 
     // Update is called once per frame
     void Update()
     {
         Vector3 temp = transform.position;
 
-        if (player.position.x > 0)
+        if (player.position.x > xMin)
         {
-            if (player.position.x < 143.5f) 
+            if (player.position.x < xMax) 
             temp.x = player.position.x;
-            else temp.x = 143.5f;
+            else temp.x = xMax;
         }
         else
         {
-            temp.x = 0;
+            temp.x = xMin;
         }
 
-        temp.y = 0f;
+        if (player.position.y > yMin)
+        {
+            if (player.position.y < yMax)
+                temp.y = player.position.y;
+            else temp.y = yMax;
+        }
+        else
+        {
+            temp.y = yMin;
+        }
 
         transform.position = temp;
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,15 @@ using UnityEngine;
 public class dialog : MonoBehaviour
 {
     private bool isPlayerInTrigger = false;
-    private Hero hero;
+    private herolvl2 hero;
+    private Rigidbody2D rb;
 
     private void Start()
     {
         GameObject _hero = GameObject.Find("Player");
-        hero = _hero.GetComponent<Hero>();
+        hero = _hero.GetComponent<herolvl2>();
+        rb = _hero.GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.zero;
         hero.enabled = false;
     }
 
