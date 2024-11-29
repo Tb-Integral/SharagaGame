@@ -23,6 +23,7 @@ public class perehodik : MonoBehaviour
         color.a = 1f;
         fadeImage.color = color;
 
+
         // Запускаем затухание
         StartCoroutine(FadeOut());
     }
@@ -45,6 +46,7 @@ public class perehodik : MonoBehaviour
         if (Progress.Instance.first)
         {
             dialog.SetActive(true);
+            Progress.Instance.first = false;
         }
     }
 }

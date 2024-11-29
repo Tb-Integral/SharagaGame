@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 330391565}
   - component: {fileID: 330391564}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1050,6 +1050,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 9534654, guid: 86665e566268cb5469dbb3747ca2839d, type: 3}
   m_PrefabInstance: {fileID: 506949913}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &532315109 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 431876, guid: 86665e566268cb5469dbb3747ca2839d, type: 3}
+  m_PrefabInstance: {fileID: 506949913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &670760878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,6 +1588,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759f161025d389b4aae3ac43bad797b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xMax: 143.5
+  xMin: 0
+  yMax: 0
+  yMin: 0
+  player: {fileID: 532315109}
 --- !u!1001 &941318616
 PrefabInstance:
   m_ObjectHideFlags: 0
