@@ -45,10 +45,11 @@ public class sadnessDialog1 : MonoBehaviour
             else if (cm.HaveCircleSad)
             {
                 cm.circlesCount--;
+                cm.AllCircles++;
                 dialog2.SetActive(true);
                 circleIcon.SetActive(false);
                 cm.HaveCircleSad = false;
-                if (cm.circlesCount == 0)
+                if (cm.AllCircles == 3)
                 {
                     StartCoroutine(FadeOut());
                 }

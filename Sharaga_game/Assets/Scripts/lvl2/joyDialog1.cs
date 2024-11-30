@@ -46,10 +46,11 @@ public class joyDialog1 : MonoBehaviour
             else if (cm.HaveCircleJoy)
             {
                 cm.circlesCount--;
+                cm.AllCircles++;
                 cm.HaveCircleJoy = false;
                 circleIcon.SetActive(false);
                 dialog2.SetActive(true);
-                if (cm.circlesCount == 0)
+                if (cm.AllCircles == 3)
                 {
                     StartCoroutine(FadeOut());
                 }

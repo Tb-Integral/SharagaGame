@@ -45,10 +45,11 @@ public class angryDialog1 : MonoBehaviour
             else if (cm.HaveCircleAngry)
             {
                 cm.circlesCount--;
+                cm.AllCircles++;
                 cm.HaveCircleAngry = false;
                 circleIcon.SetActive(false);
                 dialog2.SetActive(true);
-                if (cm.circlesCount == 0)
+                if (cm.AllCircles ==3)
                 {
                     StartCoroutine(FadeOut());
                 }
