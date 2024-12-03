@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class perehodik : MonoBehaviour
 {
     [SerializeField] private GameObject dialog;
+    [SerializeField] private GameObject dialogEnd;
     [SerializeField] private Hero hero;
 
     public Image fadeImage; // Привязать белое изображение
@@ -47,6 +48,11 @@ public class perehodik : MonoBehaviour
         {
             dialog.SetActive(true);
             Progress.Instance.first = false;
+        }
+
+        if (Progress.Instance.lvl1_check && Progress.Instance.lvl2_check && Progress.Instance.lvl3_check)
+        {
+            dialogEnd.SetActive(true);
         }
     }
 }

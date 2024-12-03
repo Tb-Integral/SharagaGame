@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class level : MonoBehaviour
