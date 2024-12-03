@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HeroMovementLvl3 : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private LayerMask groundLayer; // слой земли для проверки
     [SerializeField] private float jumpForce; // сила прыжка
+    [SerializeField] private Image fadeImage;
 
     [SerializeField] private BoxCollider2D stand;
 
@@ -28,9 +31,14 @@ public class HeroMovementLvl3 : MonoBehaviour
         bool IsWalking = false;
         bool IsRunning = false;
 
+        if (transform.position.y < -34f)
+        {
+            StartCoroutine(FadeOut());
+        }
+
         if (CanMove)
         {
-            if (Input.GetKey(KeyCode.D) && transform.position.x < 152f)
+            if (Input.GetKey(KeyCode.D) && transform.position.x < 119.09f)
             {
 
                 stand.enabled = true;
@@ -50,7 +58,7 @@ public class HeroMovementLvl3 : MonoBehaviour
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
 
-            if (Input.GetKey(KeyCode.A) && transform.position.x > -8f)
+            if (Input.GetKey(KeyCode.A) && transform.position.x > -31.8f)
             {
                 stand.enabled = true;
 
@@ -100,6 +108,24 @@ public class HeroMovementLvl3 : MonoBehaviour
         anim.SetBool("IsWalking", IsWalking);
         anim.SetBool("IsJumping", IsJumping);
         anim.SetBool("IsRunning", IsRunning);
+    }
+
+    private IEnumerator FadeOut()
+    {
+        float timer = 0f;
+        Color color = fadeImage.color;
+
+        while (timer < 1f)
+        {
+            timer += Time.deltaTime;
+            color.a = timer / 1f;
+            fadeImage.color = color;
+            yield return null;
+        }
+        color.a = 1f;
+        fadeImage.color = color;
+
+        SceneManager.LoadScene("Main");
     }
 
 }
