@@ -9,5 +9,6 @@ public class circlesManager : MonoBehaviour
     public bool HaveCircleSad = false;
     public bool HaveCircleAngry = false;
     public bool HaveCircleJoy = false;
+    public GameObject[] CircleMas = new GameObject[3] {null, null, null};
 
 }

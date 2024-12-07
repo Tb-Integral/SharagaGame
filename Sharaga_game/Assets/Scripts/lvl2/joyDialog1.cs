@@ -14,6 +14,8 @@ public class joyDialog1 : MonoBehaviour
     [SerializeField] private GameObject circleIcon;
     [SerializeField] private Image fadeImage; // Привязать белое изображение
     [SerializeField] private float fadeDuration = 2f;
+    [SerializeField] private GameObject circles;
+    [SerializeField] private GameObject panel;
     private bool IsDialoFfirst = true;
     GameObject progress;
     Progress _progress;
@@ -46,6 +48,63 @@ public class joyDialog1 : MonoBehaviour
             else if (cm.HaveCircleJoy)
             {
                 cm.circlesCount--;
+                //-28.7730683f     1.5194717f     31.8120117f
+                if (cm.CircleMas[0] && cm.CircleMas[1] && cm.CircleMas[2])
+                {
+                    if (circleIcon.transform.localPosition.x - 1.5194717f < 1.0f)
+                    {
+                        cm.CircleMas[1] = cm.CircleMas[0];
+                        cm.CircleMas[1].transform.localPosition += new Vector3(30.29254f, 0, 0);
+                    }
+                    else if (circleIcon.transform.localPosition.x - 31.8120117f < 1.0f)
+                    {
+                        cm.CircleMas[2] = cm.CircleMas[1];
+                        cm.CircleMas[1] = cm.CircleMas[0];
+                        cm.CircleMas[1].transform.localPosition += new Vector3(30.29254f, 0, 0);
+                        cm.CircleMas[2].transform.localPosition += new Vector3(30.29254f, 0, 0);
+                    }
+                    cm.CircleMas[0] = null;
+                }
+                else if (cm.CircleMas[0] && cm.CircleMas[1])
+                {
+                    if (circleIcon.transform.localPosition.x + 28.7730683f < 1.0f)
+                    {
+                        cm.CircleMas[2] = cm.CircleMas[1];
+                        cm.CircleMas[2].transform.localPosition += new Vector3(30.29254f, 0, 0);
+                    }
+                    else
+                    {
+                        cm.CircleMas[2] = cm.CircleMas[0];
+                        cm.CircleMas[2].transform.localPosition += new Vector3(2 * 30.29254f, 0, 0);
+                    }
+                    cm.CircleMas[1] = null;
+                    cm.CircleMas[0] = null;
+                }
+                else if (cm.CircleMas[1] && cm.CircleMas[2])
+                {
+                    if (circleIcon.transform.localPosition.x - 31.8120117f < 1.0f)
+                    {
+                        cm.CircleMas[2] = cm.CircleMas[1];
+                        cm.CircleMas[2].transform.localPosition += new Vector3(30.29254f, 0, 0);
+                    }
+                    cm.CircleMas[1] = null;
+                }
+                else if (cm.CircleMas[0] && cm.CircleMas[2])
+                {
+                    if (circleIcon.transform.localPosition.x - 31.8120117f < 1.0f)
+                    {
+                        cm.CircleMas[2] = cm.CircleMas[0];
+                        cm.CircleMas[2].transform.localPosition += new Vector3(2 * 30.29254f, 0, 0);
+                    }
+                    cm.CircleMas[0] = null;
+                }
+                else
+                {
+                    cm.CircleMas[0] = null;
+                    cm.CircleMas[1] = null;
+                    cm.CircleMas[2] = null;
+                    panel.SetActive(false);
+                }
                 cm.AllCircles++;
                 cm.HaveCircleJoy = false;
                 circleIcon.SetActive(false);

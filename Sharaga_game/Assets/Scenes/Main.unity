@@ -3390,10 +3390,10 @@ MonoBehaviour:
   lvl1: {fileID: 820076874}
   lvl2: {fileID: 1607336852}
   lvl3: {fileID: 606355827}
-  lvl1_check: 1
-  lvl2_check: 1
-  lvl3_check: 1
-  first: 0
+  lvl1_check: 0
+  lvl2_check: 0
+  lvl3_check: 0
+  first: 1
 --- !u!1 &1506909222
 GameObject:
   m_ObjectHideFlags: 0
