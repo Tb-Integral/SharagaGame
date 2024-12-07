@@ -6,17 +6,19 @@ using UnityEngine.UI;
 
 public class bed_button : MonoBehaviour
 {
-
+    [SerializeField] private light offOn;
     [SerializeField] private GameObject img1;
     [SerializeField] private GameObject img2;
     [SerializeField] private GameObject hero;
     [SerializeField] private GameObject dialog;
+    [SerializeField] private GameObject dialogBedNo;
 
     public Image whiteimg; // Привязать белое изображение
     public Image blackimg; // Привязать черное изображение
     public float fadeDuration = 2f;
 
     private Image targetImage;
+    private bool isPlayerInTrigger = false;
 
     void Start()
     {
@@ -39,30 +41,39 @@ public class bed_button : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Color newColor = targetImage.color;
-        newColor = Color.gray;
-        targetImage.color = newColor;
+        //Color newColor = targetImage.color;
+        //newColor = Color.gray;
+        //targetImage.color = newColor;
+        isPlayerInTrigger = true;
+
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void Update()
     {
-        Debug.Log("Stay");
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isPlayerInTrigger)
         {
-            hero.SetActive(false);
-            img2.SetActive(true);
-            img1.SetActive(false);
+            if (offOn.IsLightOff)
+            {
+                hero.SetActive(false);
+                img2.SetActive(true);
+                img1.SetActive(false);
 
-            // Начать затухание белого изображения
-            StartCoroutine(FadeOutWhite());
+                // Начать затухание белого изображения
+                StartCoroutine(FadeOutWhite());
+            }
+            else
+            {
+                dialogBedNo.SetActive(true);
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Color newColor = targetImage.color;
-        newColor = Color.white;
-        targetImage.color = newColor;
+        //Color newColor = targetImage.color;
+        //newColor = Color.white;
+        //targetImage.color = newColor;
+        isPlayerInTrigger = false;
     }
 
     private IEnumerator FadeInBlack()

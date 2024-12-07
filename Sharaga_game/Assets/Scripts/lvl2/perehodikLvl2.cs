@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class perehodikLvl2 : MonoBehaviour
 {
-    //[SerializeField] private GameObject dialog;
-    //[SerializeField] private Hero hero;
+    [SerializeField] private GameObject Startdialog;
     [SerializeField] private Image fadeImage; // Привязать белое изображение
     [SerializeField] private float fadeDuration = 2f;
 
@@ -37,6 +36,6 @@ public class perehodikLvl2 : MonoBehaviour
         color.a = 0f; // Полностью прозрачный экран
         fadeImage.color = color;
 
-        //dialog.SetActive(true);
+        Startdialog.SetActive(true);
     }
 }

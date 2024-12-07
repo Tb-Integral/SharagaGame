@@ -14,6 +14,7 @@ public class Hero_norm : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     private bool isGrounded;
+    private bool slideBro = false;
     public bool CanMove = true;
 
     private void Start()
@@ -34,9 +35,11 @@ public class Hero_norm : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.D) && transform.position.x < 152f)
             {
-
-                stand.enabled = true;
-                down.enabled = false;
+                if (!slideBro)
+                {
+                    stand.enabled = true;
+                    down.enabled = false;
+                }
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     IsRunning = true;
@@ -49,7 +52,7 @@ public class Hero_norm : MonoBehaviour
                     IsWalking = true;
                 }
 
-                if (Input.GetKey(KeyCode.S))
+                if (Input.GetKeyDown(KeyCode.S))
                 {
                     IsSliding = true;
                     IsWalking = false;
@@ -57,6 +60,8 @@ public class Hero_norm : MonoBehaviour
 
                     stand.enabled = false;
                     down.enabled = true;
+                    slideBro = true;
+                    StartCoroutine(Sliding());
                 }
 
                 // ”становить поворот вправо, сохран€€ текущие y и z
@@ -65,9 +70,11 @@ public class Hero_norm : MonoBehaviour
 
             if (Input.GetKey(KeyCode.A) && transform.position.x > -8f)
             {
-                stand.enabled = true;
-                down.enabled = false;
-
+                if (!slideBro)
+                {
+                    stand.enabled = true;
+                    down.enabled = false;
+                }
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     IsRunning = true;
@@ -80,7 +87,7 @@ public class Hero_norm : MonoBehaviour
                     IsWalking = true;
                 }
 
-                if (Input.GetKey(KeyCode.S))
+                if (Input.GetKeyDown(KeyCode.S))
                 {
                     IsSliding = true;
                     IsWalking = false;
@@ -88,6 +95,8 @@ public class Hero_norm : MonoBehaviour
 
                     stand.enabled = false;
                     down.enabled = true;
+                    slideBro = true;
+                    StartCoroutine(Sliding());
                 }
 
                 // ”становить поворот влево, сохран€€ текущие y и z
@@ -117,14 +126,27 @@ public class Hero_norm : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 IsJumping = true;
             }
+
+            if (slideBro)
+            {
+                IsSliding = true;
+                IsWalking = false;
+                IsRunning = false;
+            }
         }
         
-
-        // ѕередаем значение параметру анимации
         anim.SetBool("IsWalking", IsWalking);
         anim.SetBool("IsJumping", IsJumping);
         anim.SetBool("IsRunning", IsRunning);
         anim.SetBool("IsSliding", IsSliding);
+    }
+
+    private IEnumerator Sliding()
+    {
+        yield return new WaitForSeconds(0.8f);
+        stand.enabled = true;
+        down.enabled = false;
+        slideBro = false;
     }
 
 }
