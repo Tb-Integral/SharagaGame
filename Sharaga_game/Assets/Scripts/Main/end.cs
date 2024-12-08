@@ -7,11 +7,14 @@ using UnityEngine.UI;
 
 public class end : MonoBehaviour
 {
+    [SerializeField] private AudioSource click;
+    [SerializeField] private AudioSource walk;
     [SerializeField] private Hero hero;
     [SerializeField] private Image black;
 
     void Start()
     {
+        walk.Stop();
         StartCoroutine(ActivateButtonAfterDelay());
     }
 
@@ -19,6 +22,7 @@ public class end : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            click.Play();
             StartCoroutine(GoToEnd());
         }
     }

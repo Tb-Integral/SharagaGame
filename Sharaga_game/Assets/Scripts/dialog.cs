@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class dialog : MonoBehaviour
 {
+    [SerializeField] private AudioSource click;
+    [SerializeField] private AudioSource walk;
     private bool isPlayerInTrigger = false;
     private Hero hero;
     private Rigidbody2D rb;
 
     private void Start()
     {
+        walk.Stop();
         GameObject _hero = GameObject.Find("Player");
         hero = _hero.GetComponent<Hero>();
         rb = _hero.GetComponent<Rigidbody2D>();
@@ -27,6 +30,7 @@ public class dialog : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.Space))
         {
+            click.Play();
             hero.enabled = true;
             gameObject.SetActive(false);
         }

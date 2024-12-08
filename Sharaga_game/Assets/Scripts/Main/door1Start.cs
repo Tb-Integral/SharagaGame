@@ -7,6 +7,9 @@ using static Unity.Collections.AllocatorManager;
 
 public class door1Start : MonoBehaviour
 {
+    [SerializeField] private AudioSource click;
+    [SerializeField] private AudioSource walk;
+    [SerializeField] private AudioSource doorSound;
     private bool isPlayerInTrigger = false;
     private Hero hero;
     private Rigidbody2D rb;
@@ -16,6 +19,7 @@ public class door1Start : MonoBehaviour
 
     private void Start()
     {
+        walk.Stop();
         GameObject _hero = GameObject.Find("Player");
         hero = _hero.GetComponent<Hero>();
         rb = _hero.GetComponent<Rigidbody2D>();
@@ -32,6 +36,7 @@ public class door1Start : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.Space))
         {
+            click.Play();
             hero.enabled = true;
             StartCoroutine(GoToLvl());
         }
@@ -47,7 +52,7 @@ public class door1Start : MonoBehaviour
         Debug.Log("FadeOut");
         float timer = 0f;
         Color color = black.color;
-
+        doorSound.Play();
         while (timer < fadeDuration)
         {
             Debug.Log("perehod");

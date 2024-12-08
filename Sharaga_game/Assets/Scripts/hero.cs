@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hero : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private AudioSource waliSound;
     private Animator anim;
 
     private void Start()
@@ -15,7 +16,6 @@ public class Hero : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         bool IsWalking = false;
 
         if (Input.GetKey(KeyCode.D) && transform.position.x < 7f)
@@ -37,6 +37,11 @@ public class Hero : MonoBehaviour
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             
             IsWalking = true;
+        }
+
+        if (!IsWalking)
+        {
+            waliSound.Play();
         }
 
         // Передаем значение параметру анимации

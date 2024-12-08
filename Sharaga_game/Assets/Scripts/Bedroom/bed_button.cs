@@ -12,6 +12,9 @@ public class bed_button : MonoBehaviour
     [SerializeField] private GameObject hero;
     [SerializeField] private GameObject dialog;
     [SerializeField] private GameObject dialogBedNo;
+    [SerializeField] private AudioSource audio;
+    [SerializeField] private float targetVolume = 0.18f; // Целевая громкость
+    [SerializeField] private AudioSource walking;
 
     public Image whiteimg; // Привязать белое изображение
     public Image blackimg; // Привязать черное изображение
@@ -22,6 +25,7 @@ public class bed_button : MonoBehaviour
 
     void Start()
     {
+        audio.volume = 0f;
         targetImage = GetComponent<Image>();
 
         // Установить черное изображение полностью непрозрачным
@@ -54,6 +58,7 @@ public class bed_button : MonoBehaviour
         {
             if (offOn.IsLightOff)
             {
+                walking.Stop();
                 hero.SetActive(false);
                 img2.SetActive(true);
                 img1.SetActive(false);
@@ -86,6 +91,7 @@ public class bed_button : MonoBehaviour
             timer += Time.deltaTime;
             color.a = 1f - (timer / fadeDuration); // Уменьшаем альфа от 1 до 0
             blackimg.color = color;
+            audio.volume = Mathf.Lerp(0f, targetVolume, timer / fadeDuration);
             yield return null;
         }
         dialog.SetActive(true);
@@ -106,6 +112,7 @@ public class bed_button : MonoBehaviour
             timer += Time.deltaTime;
             color.a = timer / fadeDuration; // Увеличиваем альфа от 0 до 1
             whiteimg.color = color;
+            //audio.volume = Mathf.Lerp(targetVolume, 0f, timer / fadeDuration);
             yield return null;
         }
 
