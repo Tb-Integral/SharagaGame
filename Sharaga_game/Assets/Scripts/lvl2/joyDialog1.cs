@@ -16,6 +16,7 @@ public class joyDialog1 : MonoBehaviour
     [SerializeField] private float fadeDuration = 2f;
     [SerializeField] private GameObject circles;
     [SerializeField] private GameObject panel;
+    [SerializeField] private AudioSource pick;
     private bool IsDialoFfirst = true;
     GameObject progress;
     Progress _progress;
@@ -40,13 +41,16 @@ public class joyDialog1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isPlayerInTrigger)
         {
+            hero.walk.Stop();
             if (IsDialoFfirst)
             {
+                pick.Play();
                 IsDialoFfirst = false;
                 dialog1.SetActive(true);
             }
             else if (cm.HaveCircleJoy)
             {
+                pick.Play();
                 cm.circlesCount--;
                 //-28.7730683f     1.5194717f     31.8120117f
                 if (cm.CircleMas[0] && cm.CircleMas[1] && cm.CircleMas[2])

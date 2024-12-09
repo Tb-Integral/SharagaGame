@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
 {
     [SerializeField] private GameObject hero;
     [SerializeField] private head monster;
+    [SerializeField] private AudioSource sound;
 
     public Image blackimg; // Привязать черное изображение
     public float fadeDuration = 2f;
@@ -39,6 +40,7 @@ public class Door : MonoBehaviour
     {
         if (collision.gameObject == hero)
         {
+            
             // Изменяем цвет объекта на более темный
             SetObjectColor(Color.gray);
         }
@@ -48,6 +50,7 @@ public class Door : MonoBehaviour
     {
         if (collision.gameObject == hero && Input.GetKey(KeyCode.Space))
         {
+            sound.Play();
             StartCoroutine(FadeOutBlack());
         }
     }

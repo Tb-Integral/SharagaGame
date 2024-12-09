@@ -7,6 +7,7 @@ public class dialogEnd : MonoBehaviour
     [SerializeField] private GameObject img;
     [SerializeField] private SpriteRenderer player;
     [SerializeField] private robMove robMove;
+    [SerializeField] private AudioSource sound;
     private bool isPlayerInTrigger = false;
     private Rigidbody2D rb;
 
@@ -26,6 +27,7 @@ public class dialogEnd : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.Space))
         {
+            sound.Play();
             img.SetActive(true);
             player.color = Color.gray;
             Color color = player.color;

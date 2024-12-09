@@ -7,11 +7,13 @@ public class yellow : MonoBehaviour
     [SerializeField] private circlesManager cm;
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject circle;
+    [SerializeField] private AudioSource pick;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            pick.Play();
             cm.HaveCircleJoy = true;
             cm.circlesCount++;
             if (cm.CircleMas[2])

@@ -12,14 +12,15 @@ public class head : MonoBehaviour
     [SerializeField] private TMP_Text text;
     [SerializeField] private GameObject text2;
     [SerializeField] private Image black;
-
     public bool IsDead = false;
     public float speed;
+    private AudioSource aud;
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0;
+        //aud = GetComponent<AudioSource>();
+        speed = 9.5f;
         StartCoroutine(Enum()); // Запускаем корутину правильно
     }
 
@@ -51,7 +52,8 @@ public class head : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         text.enabled = false;
-        speed = 9.5f;
+        //speed = 9.5f;
+        //aud.Play();
     }
 
     private IEnumerator Dead()

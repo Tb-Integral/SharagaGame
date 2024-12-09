@@ -8,11 +8,13 @@ using static Unity.Collections.AllocatorManager;
 public class dialogEnd2 : MonoBehaviour
 {
     [SerializeField] private Image black;
+    [SerializeField] private AudioSource sound;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            sound.Play();
             StartCoroutine(FadeOut());
         }
     }

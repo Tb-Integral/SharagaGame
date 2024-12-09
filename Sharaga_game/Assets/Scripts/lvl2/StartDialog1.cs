@@ -5,6 +5,7 @@ using UnityEngine;
 public class StartDialog1 : MonoBehaviour
 {
     [SerializeField] private GameObject dialog2;
+    [SerializeField] private AudioSource dialogSound;
     private bool isPlayerInTrigger = false;
     private herolvl2 hero;
     private Rigidbody2D rb;
@@ -27,6 +28,8 @@ public class StartDialog1 : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.Space))
         {
+            hero.walk.Stop();
+            dialogSound.Play();
             dialog2.SetActive(true);
             gameObject.SetActive(false);
         }

@@ -10,6 +10,9 @@ public class robMove : MonoBehaviour
     [SerializeField] private GameObject whiteDoor2;
     [SerializeField] private GameObject effect;
     [SerializeField] private GameObject dialogGolos;
+    [SerializeField] private AudioSource walk;
+    [SerializeField] private AudioSource door;
+    [SerializeField] private AudioSource lighrEffect;
     private Animator anim;
     private bool IsWalking = false;
     public bool IsDialogEnd = false;
@@ -37,6 +40,7 @@ public class robMove : MonoBehaviour
         isMoving = true; // Устанавливаем флаг, чтобы предотвратить повторный запуск
         IsWalking = true;
 
+        walk.Play();
         float timer = 0f;
         while (timer < 3f)
         {
@@ -47,10 +51,12 @@ public class robMove : MonoBehaviour
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             yield return null;
         }
+        walk.Stop();
 
         IsWalking = false;
         IsDialogEnd = false;
         isMoving = false; // Сбрасываем флаг после завершения движения
+
         blackDoor.SetActive(true);
 
         timer = 0f;
@@ -66,6 +72,7 @@ public class robMove : MonoBehaviour
         }
         color.a = 0f; // Полностью прозрачный экран
         sp.color = color;
+        door.Play();
         blackDoor.SetActive(false);
 
         timer = 0f;
@@ -74,6 +81,7 @@ public class robMove : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
+        door.Play();
         whiteDoor.SetActive(true);
         whiteDoor2.SetActive(true);
         effect.SetActive(true);
@@ -81,6 +89,7 @@ public class robMove : MonoBehaviour
         timer = 0f;
         Transform _effect = effect.GetComponent<Transform>(); // Получаем Transform объекта
         Vector3 scale = _effect.localScale; // Берём текущий масштаб объекта
+        lighrEffect.Play();
 
         while (timer < 2f)
         {

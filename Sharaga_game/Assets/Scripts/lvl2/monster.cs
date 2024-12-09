@@ -9,6 +9,8 @@ public class monster : MonoBehaviour
     [SerializeField] private GameObject _hero;
     [SerializeField] private GameObject image;
     [SerializeField] private float imageDuration = 7f;
+    [SerializeField] private AudioSource noise;
+    [SerializeField] private AudioSource music;
     private bool isPlayerInTrigger = false;
     private herolvl2 hero;
     private Rigidbody2D rb;
@@ -37,6 +39,9 @@ public class monster : MonoBehaviour
 
     private IEnumerator ShowMonster()
     {
+        hero.walk.Stop();
+        noise.Play();
+        music.Pause();
         rb.velocity = Vector2.zero;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         hero.enabled = false;
@@ -51,5 +56,7 @@ public class monster : MonoBehaviour
         }
         image.SetActive(false);
         hero.enabled = true;
+        noise.Stop();
+        music.Play();
     }
 }

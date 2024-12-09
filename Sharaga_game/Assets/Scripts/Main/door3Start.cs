@@ -65,6 +65,6 @@ public class door3Start : MonoBehaviour
         color.a = 1f;
         black.color = color;
 
-        SceneManager.LoadScene("lvl1");
+        SceneManager.LoadScene("lvl3");
     }
 }

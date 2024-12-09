@@ -10,11 +10,16 @@ public class Hero_norm : MonoBehaviour
 
     [SerializeField] private CapsuleCollider2D stand;
     [SerializeField] private BoxCollider2D down;
+    [SerializeField] private AudioSource running;
+    [SerializeField] private AudioSource walking;
+    [SerializeField] private AudioSource jump;
+    [SerializeField] private AudioSource slide;
 
     private Animator anim;
     private Rigidbody2D rb;
     private bool isGrounded;
     private bool slideBro = false;
+    private bool jumpBro = false;
     public bool CanMove = true;
 
     private void Start()
@@ -124,7 +129,8 @@ public class Hero_norm : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W) && isGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                IsJumping = true;
+                jumpBro = true;
+                StartCoroutine(Jumping());
             }
 
             if (slideBro)
@@ -133,8 +139,34 @@ public class Hero_norm : MonoBehaviour
                 IsWalking = false;
                 IsRunning = false;
             }
+
+            if (jumpBro)
+            {
+                IsJumping = true;
+                IsWalking = false;
+                IsRunning = false;
+            }
         }
-        
+        if (!IsWalking)
+        {
+            walking.Play();
+        }
+
+        if (!IsRunning)
+        {
+            running.Play();
+        }
+        if (!IsJumping)
+        {
+            jump.Play();
+        }
+        if (!IsSliding)
+        {
+            slide.Play();
+        }
+
+
+
         anim.SetBool("IsWalking", IsWalking);
         anim.SetBool("IsJumping", IsJumping);
         anim.SetBool("IsRunning", IsRunning);
@@ -147,6 +179,12 @@ public class Hero_norm : MonoBehaviour
         stand.enabled = true;
         down.enabled = false;
         slideBro = false;
+    }
+
+    private IEnumerator Jumping()
+    {
+        yield return new WaitForSeconds(0.8f);
+        jumpBro = false;
     }
 
 }

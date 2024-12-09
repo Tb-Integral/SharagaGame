@@ -15,6 +15,7 @@ public class sadnessDialog1 : MonoBehaviour
     [SerializeField] private Image fadeImage; // Привязать белое изображение
     [SerializeField] private float fadeDuration = 2f;
     [SerializeField] private GameObject panel;
+    [SerializeField] private AudioSource pick;
     private bool IsDialoFfirst = true;
     GameObject progress;
     Progress _progress;
@@ -38,13 +39,16 @@ public class sadnessDialog1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isPlayerInTrigger)
         {
+            hero.walk.Stop();
             if (IsDialoFfirst)
             {
+                pick.Play();
                 IsDialoFfirst = false;
                 dialog1.SetActive(true);
             }
             else if (cm.HaveCircleSad)
             {
+                pick.Play();
                 cm.circlesCount--;
                 //смещение интерфейса с кругами
                 if (cm.CircleMas[0] && cm.CircleMas[1] && cm.CircleMas[2])

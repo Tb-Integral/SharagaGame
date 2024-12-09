@@ -16,6 +16,7 @@ public class angryDialog1 : MonoBehaviour
     [SerializeField] private float fadeDuration = 2f;
     [SerializeField] private GameObject circles;
     [SerializeField] private GameObject panel;
+    [SerializeField] private AudioSource pick;
     private bool IsDialoFfirst = true;
     GameObject progress;
     Progress _progress;
@@ -39,13 +40,16 @@ public class angryDialog1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isPlayerInTrigger)
         {
+            hero.walk.Stop();
             if (IsDialoFfirst)
             {
+                pick.Play();
                 IsDialoFfirst = false;
                 dialog1.SetActive(true);
             }
             else if (cm.HaveCircleAngry)
             {
+                pick.Play();
                 cm.circlesCount--;
                 if (cm.CircleMas[0] && cm.CircleMas[1] && cm.CircleMas[2])
                 {

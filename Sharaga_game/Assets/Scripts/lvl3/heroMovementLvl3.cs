@@ -10,8 +10,10 @@ public class HeroMovementLvl3 : MonoBehaviour
     [SerializeField] private LayerMask groundLayer; // слой земли для проверки
     [SerializeField] private float jumpForce; // сила прыжка
     [SerializeField] private Image fadeImage;
-
     [SerializeField] private BoxCollider2D stand;
+    [SerializeField] private AudioSource walk;
+    [SerializeField] private AudioSource run;
+    [SerializeField] private AudioSource jump;
 
     private Animator anim;
     private Rigidbody2D rb;
@@ -100,6 +102,16 @@ public class HeroMovementLvl3 : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 IsJumping = true;
+            }
+
+            if (!IsWalking)
+            {
+                walk.Play();
+            }
+
+            if (!IsRunning)
+            {
+                run.Play();
             }
         }
         

@@ -316,7 +316,7 @@ MonoBehaviour:
   dialog: {fileID: 1344922550}
   dialogBedNo: {fileID: 1659765392}
   audio: {fileID: 407917813}
-  targetVolume: 0.1
+  targetVolume: 0.5
   walking: {fileID: 1138598023}
   whiteimg: {fileID: 1697890673}
   blackimg: {fileID: 1241253769}
@@ -1073,7 +1073,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 537f51ef82b4db64fbcdc1f16174a01a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 991b140a2efc2e04c8f00e4d88c949c9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.18
   m_Pitch: 1
