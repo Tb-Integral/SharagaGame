@@ -1695,6 +1695,7 @@ MonoBehaviour:
   stand: {fileID: 399619748}
   walk: {fileID: 452105680}
   run: {fileID: 1826958571}
+  jump: {fileID: 0}
   CanMove: 1
 --- !u!61 &399619748
 BoxCollider2D:
@@ -3862,6 +3863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 1946450236}
+  click: {fileID: 1526175879}
 --- !u!4 &1197291259
 Transform:
   m_ObjectHideFlags: 0

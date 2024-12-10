@@ -67,6 +67,7 @@ public class HeroMovementLvl3 : MonoBehaviour
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     IsRunning = true;
+                    IsWalking = false;
                     transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime * 2;
                 }
                 else
@@ -74,6 +75,7 @@ public class HeroMovementLvl3 : MonoBehaviour
                     transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
 
                     IsWalking = true;
+                    IsRunning = false;
                 }
 
                 // Установить поворот влево, сохраняя текущие y и z
@@ -95,6 +97,8 @@ public class HeroMovementLvl3 : MonoBehaviour
             {
                 isGrounded = false;
                 IsJumping = true;
+                IsWalking = false;
+                IsRunning = false;
             }
 
             // Прыжок
@@ -102,6 +106,8 @@ public class HeroMovementLvl3 : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 IsJumping = true;
+                IsWalking = false;
+                IsRunning = false;
             }
 
             if (!IsWalking)

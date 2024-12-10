@@ -48,6 +48,6 @@ public class end : MonoBehaviour
 
         color.a = 1f;
         black.color = color;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("End");
     }
 }

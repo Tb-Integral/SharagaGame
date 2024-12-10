@@ -15,18 +15,17 @@ public class bed_button : MonoBehaviour
     [SerializeField] private AudioSource audio;
     [SerializeField] private float targetVolume = 0.18f; // Целевая громкость
     [SerializeField] private AudioSource walking;
+    [SerializeField] private SpriteRenderer imgBed;
 
     public Image whiteimg; // Привязать белое изображение
     public Image blackimg; // Привязать черное изображение
     public float fadeDuration = 2f;
 
-    private Image targetImage;
     private bool isPlayerInTrigger = false;
 
     void Start()
     {
         audio.volume = 0f;
-        targetImage = GetComponent<Image>();
 
         // Установить черное изображение полностью непрозрачным
         Color blackColor = blackimg.color;
@@ -45,9 +44,16 @@ public class bed_button : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Color newColor = targetImage.color;
-        //newColor = Color.gray;
-        //targetImage.color = newColor;
+        Color newColor = imgBed.color;
+        if (offOn.IsLightOff)
+        {
+            newColor = new Color(80f / 255f, 80f / 255f, 80f / 255f);
+        }
+        else 
+        {
+            newColor = Color.gray;
+        }
+        imgBed.color = newColor;
         isPlayerInTrigger = true;
 
     }
@@ -75,9 +81,16 @@ public class bed_button : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //Color newColor = targetImage.color;
-        //newColor = Color.white;
-        //targetImage.color = newColor;
+        Color newColor = imgBed.color;
+        if (offOn.IsLightOff)
+        {
+            newColor = Color.gray;
+        }
+        else
+        {
+            newColor = Color.white;
+        }
+        imgBed.color = newColor;
         isPlayerInTrigger = false;
     }
 

@@ -58,5 +58,6 @@ public class monster : MonoBehaviour
         hero.enabled = true;
         noise.Stop();
         music.Play();
+        gameObject.SetActive(false);
     }
 }
