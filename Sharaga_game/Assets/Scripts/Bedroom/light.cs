@@ -29,7 +29,8 @@ public class light : MonoBehaviour
             music3.Stop();
             clickSound.Play();
             lightOff.SetActive(true);
-            audio.volume = 0f;
+            audio.Stop();
+            audio2.Play();
             audio2.volume = 0.5f;
             hero.color = Color.grey;
             IsLightOff = true;

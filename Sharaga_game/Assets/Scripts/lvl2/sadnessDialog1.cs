@@ -57,14 +57,14 @@ public class sadnessDialog1 : MonoBehaviour
                     if (circleIcon.transform.localPosition.x - 1.5194717f < 1.0f)
                     {
                         cm.CircleMas[1] = cm.CircleMas[0];
-                        cm.CircleMas[1].transform.localPosition = new Vector3(transform.localPosition.x + 30.29254f, transform.localPosition.y, 0);
+                        cm.CircleMas[1].transform.localPosition += new Vector3(30.29254f, 0, 0);
                     }
                     else if (circleIcon.transform.localPosition.x - 31.8120117f < 1.0f)
                     {
                         cm.CircleMas[2] = cm.CircleMas[1];
                         cm.CircleMas[1] = cm.CircleMas[0];
-                        cm.CircleMas[1].transform.localPosition = new Vector3(transform.localPosition.x + 30.29254f, transform.localPosition.y, 0);
-                        cm.CircleMas[2].transform.localPosition = new Vector3(transform.localPosition.x + 30.29254f, transform.localPosition.y, 0);
+                        cm.CircleMas[1].transform.localPosition += new Vector3(30.29254f, 0, 0);
+                        cm.CircleMas[2].transform.localPosition += new Vector3(30.29254f, 0, 0);
                     }
                     cm.CircleMas[0] = null;
                 }
@@ -73,12 +73,12 @@ public class sadnessDialog1 : MonoBehaviour
                     if (circleIcon.transform.localPosition.x + 28.7730683f < 1.0f)
                     {
                         cm.CircleMas[2] = cm.CircleMas[1];
-                        cm.CircleMas[2].transform.localPosition = new Vector3(transform.localPosition.x + 30.29254f, transform.localPosition.y, 0);
+                        cm.CircleMas[2].transform.localPosition += new Vector3(30.29254f, 0, 0);
                     }
                     else
                     {
                         cm.CircleMas[2] = cm.CircleMas[0];
-                        cm.CircleMas[2].transform.localPosition = new Vector3(transform.localPosition.x + 2 * 30.29254f, transform.localPosition.y, 0);
+                        cm.CircleMas[2].transform.localPosition += new Vector3(2 * 30.29254f, 0, 0);
                     }
                     cm.CircleMas[1] = null;
                     cm.CircleMas[0] = null;
@@ -88,7 +88,7 @@ public class sadnessDialog1 : MonoBehaviour
                     if (circleIcon.transform.localPosition.x - 31.8120117f < 1.0f)
                     {
                         cm.CircleMas[2] = cm.CircleMas[0];
-                        cm.CircleMas[2].transform.localPosition = new Vector3(transform.localPosition.x + 2 * 30.29254f, transform.localPosition.y, 0);
+                        cm.CircleMas[2].transform.localPosition += new Vector3(2 * 30.29254f, 0, 0);
                     }
                     cm.CircleMas[0] = null;
                 }
@@ -97,7 +97,7 @@ public class sadnessDialog1 : MonoBehaviour
                     if (circleIcon.transform.localPosition.x - 1.5194717f < 1.0f)
                     {
                         cm.CircleMas[2] = cm.CircleMas[1];
-                        cm.CircleMas[2].transform.localPosition = new Vector3(transform.localPosition.x + 30.29254f, transform.localPosition.y, 0);
+                        cm.CircleMas[2].transform.localPosition += new Vector3(30.29254f, 0, 0);
                     }
                     cm.CircleMas[1] = null;
                 }
