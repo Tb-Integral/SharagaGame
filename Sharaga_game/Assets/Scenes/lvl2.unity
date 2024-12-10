@@ -278,7 +278,6 @@ MonoBehaviour:
   circles: {fileID: 0}
   panel: {fileID: 957326333}
   pick: {fileID: 1719652859}
-  walkSound: {fileID: 149722432}
 --- !u!1 &27124844
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,8 +830,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118527162}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2, y: 0.25852412, z: 38.23185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.200012, y: 0.25854492, z: 38.23185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1832,8 +1831,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307576333}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.9, y: 7.2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -32.900024, y: 7.200012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2665,8 +2664,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378348593}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.1, y: -7.1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.0999756, y: -7.0999756, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3806,7 +3805,6 @@ MonoBehaviour:
   fadeDuration: 2
   panel: {fileID: 957326333}
   pick: {fileID: 1719652859}
-  walkSound: {fileID: 149722432}
 --- !u!1 &654424626
 GameObject:
   m_ObjectHideFlags: 0
@@ -4354,8 +4352,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700879709}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.451813, y: 3.2431269, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 43.451782, y: 3.243103, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4561,7 +4559,6 @@ MonoBehaviour:
   circles: {fileID: 0}
   panel: {fileID: 957326333}
   pick: {fileID: 1719652859}
-  walkSound: {fileID: 149722432}
 --- !u!1 &709885925
 GameObject:
   m_ObjectHideFlags: 0
@@ -4686,7 +4683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709885925}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13, y: -15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6580,8 +6577,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182587572}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.5, y: 20.3, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 43.5, y: 20.299988, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11257,13 +11254,13 @@ SceneRoots:
   - {fileID: 1142715050}
   - {fileID: 458877988}
   - {fileID: 525090981}
-  - {fileID: 118527163}
   - {fileID: 239373588}
-  - {fileID: 709885928}
-  - {fileID: 378348596}
-  - {fileID: 1182587575}
-  - {fileID: 307576337}
   - {fileID: 1450732275}
   - {fileID: 696603486}
-  - {fileID: 700879712}
   - {fileID: 1589574164}
+  - {fileID: 118527163}
+  - {fileID: 700879712}
+  - {fileID: 307576337}
+  - {fileID: 1182587575}
+  - {fileID: 378348596}
+  - {fileID: 709885928}

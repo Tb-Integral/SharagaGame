@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class blue : MonoBehaviour
@@ -8,10 +9,15 @@ public class blue : MonoBehaviour
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject circle;
     [SerializeField] private AudioSource pick;
+    private bool IsHeroOnTrigger = false;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetKey(KeyCode.Space))
+        IsHeroOnTrigger = true;
+    }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Space) && IsHeroOnTrigger)
         {
             pick.Play();
             cm.HaveCircleSad = true;
@@ -40,5 +46,10 @@ public class blue : MonoBehaviour
             }
             gameObject.SetActive(false);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        IsHeroOnTrigger = false;
     }
 }

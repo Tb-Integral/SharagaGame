@@ -8,10 +8,15 @@ public class red : MonoBehaviour
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject circle;
     [SerializeField] private AudioSource pick;
-
-    private void OnTriggerStay2D(Collider2D collision)
+    private bool IsHeroOnTrigger = false;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetKey(KeyCode.Space))
+        IsHeroOnTrigger = true;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Space) && IsHeroOnTrigger)
         {
             pick.Play();
             cm.HaveCircleAngry = true;
@@ -40,5 +45,9 @@ public class red : MonoBehaviour
             }
             gameObject.SetActive(false);
         }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        IsHeroOnTrigger = false;
     }
 }

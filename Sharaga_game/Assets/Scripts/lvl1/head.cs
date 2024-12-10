@@ -12,9 +12,9 @@ public class head : MonoBehaviour
     [SerializeField] private TMP_Text text;
     [SerializeField] private GameObject text2;
     [SerializeField] private Image black;
+    [SerializeField] private BoxCollider2D door;
     public bool IsDead = false;
     public float speed;
-    private AudioSource aud;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +32,7 @@ public class head : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        door.enabled = false;
         Color color = black.color;
         IsDead = true;
         managment.CanMove = false;

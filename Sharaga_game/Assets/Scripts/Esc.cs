@@ -10,6 +10,7 @@ public class Esc : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Application.targetFrameRate = 60; // Ограничение FPS до 60
             click.Play();
             Menu.SetActive(true);
         }

@@ -41,16 +41,17 @@ public class joyDialog1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isPlayerInTrigger)
         {
-            hero.walk.Stop();
             if (IsDialoFfirst)
             {
                 pick.Play();
+                hero.walk.Stop();
                 IsDialoFfirst = false;
                 dialog1.SetActive(true);
             }
             else if (cm.HaveCircleJoy)
             {
                 pick.Play();
+                hero.walk.Stop();
                 cm.circlesCount--;
                 //-28.7730683f     1.5194717f     31.8120117f
                 if (cm.CircleMas[0] && cm.CircleMas[1] && cm.CircleMas[2])
@@ -101,6 +102,15 @@ public class joyDialog1 : MonoBehaviour
                         cm.CircleMas[2].transform.localPosition += new Vector3(2 * 30.29254f, 0, 0);
                     }
                     cm.CircleMas[0] = null;
+                }
+                else if (cm.CircleMas[1] && cm.CircleMas[2])
+                {
+                    if (circleIcon.transform.localPosition.x - 1.5194717f < 1.0f)
+                    {
+                        cm.CircleMas[2] = cm.CircleMas[1];
+                        cm.CircleMas[2].transform.localPosition = new Vector3(transform.localPosition.x + 30.29254f, transform.localPosition.y, 0);
+                    }
+                    cm.CircleMas[1] = null;
                 }
                 else
                 {
