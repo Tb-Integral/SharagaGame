@@ -11,7 +11,7 @@ public class herolvl2 : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 moveVector;
-    private bool IsWalking;
+    public bool IsWalking;
 
     void Awake()
     {
@@ -58,5 +58,17 @@ public class herolvl2 : MonoBehaviour
         {
             walk.Play();
         }
+    }
+
+    private void OnEnable()
+    {
+        IsWalking = true;
+        walk.Play();
+    }
+
+    private void OnDisable()
+    {
+        IsWalking = false;
+        walk.Stop();
     }
 }

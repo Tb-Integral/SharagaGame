@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Hero : MonoBehaviour
@@ -7,6 +8,7 @@ public class Hero : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private AudioSource waliSound;
     private Animator anim;
+    private bool IsWalking;
 
     private void Start()
     {
@@ -16,7 +18,7 @@ public class Hero : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool IsWalking = false;
+        IsWalking = false;
 
         if (Input.GetKey(KeyCode.D) && transform.position.x < 7f)
         {
@@ -45,6 +47,12 @@ public class Hero : MonoBehaviour
         }
 
         // Передаем значение параметру анимации
+        anim.SetBool("IsWalking", IsWalking);
+    }
+
+    private void OnDisable()
+    {
+        IsWalking = false;
         anim.SetBool("IsWalking", IsWalking);
     }
 

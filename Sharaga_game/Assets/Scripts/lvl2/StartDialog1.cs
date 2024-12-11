@@ -28,7 +28,7 @@ public class StartDialog1 : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.Space))
         {
-            hero.walk.Stop();
+            hero.enabled = false;
             dialogSound.Play();
             dialog2.SetActive(true);
             gameObject.SetActive(false);

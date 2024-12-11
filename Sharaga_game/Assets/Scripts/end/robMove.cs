@@ -56,7 +56,7 @@ public class robMove : MonoBehaviour
         IsWalking = false;
         IsDialogEnd = false;
         isMoving = false; // —брасываем флаг после завершени€ движени€
-
+        door.Play();
         blackDoor.SetActive(true);
 
         timer = 0f;

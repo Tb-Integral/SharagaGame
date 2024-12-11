@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class HeroMovementLvl3 : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float speed; // скорость игрока
     [SerializeField] private LayerMask groundLayer; // слой земли для проверки
     [SerializeField] private float jumpForce; // сила прыжка
     [SerializeField] private Image fadeImage;

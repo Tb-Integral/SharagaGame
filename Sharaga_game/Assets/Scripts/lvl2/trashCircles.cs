@@ -32,4 +32,9 @@ public class trashCircles : MonoBehaviour
             gameObject.GetComponent<trashCircles>().enabled = false;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        isPlayerInTrigger = false;
+    }
 }

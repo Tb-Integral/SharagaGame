@@ -24,6 +24,7 @@ public class door1Start : MonoBehaviour
         hero = _hero.GetComponent<Hero>();
         rb = _hero.GetComponent<Rigidbody2D>();
         rb.velocity = Vector2.zero;
+
         hero.enabled = false;
     }
 

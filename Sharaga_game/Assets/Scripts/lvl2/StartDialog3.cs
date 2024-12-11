@@ -12,7 +12,6 @@ public class StartDialog3 : MonoBehaviour
         {
             dialogSound.Play();
             hero.enabled = true;
-            hero.walk.Stop();
             gameObject.SetActive(false);
         }
     }

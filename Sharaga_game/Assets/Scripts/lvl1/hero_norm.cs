@@ -4,26 +4,27 @@ using UnityEngine;
 
 public class Hero_norm : MonoBehaviour
 {
+    //движение игрока для 1 уровня
     [SerializeField] private float speed;
     [SerializeField] private LayerMask groundLayer; // слой земли для проверки
     [SerializeField] private float jumpForce; // сила прыжка
+    [SerializeField] private CapsuleCollider2D stand; // коллайдер вертикальный
+    [SerializeField] private BoxCollider2D down; // коллайдер горизонтальный
+    [SerializeField] private AudioSource running; // звук бега
+    [SerializeField] private AudioSource walking; // звук ходьбы
+    [SerializeField] private AudioSource jump; // звук прыжка
+    [SerializeField] private AudioSource slide; // звук скольжения
 
-    [SerializeField] private CapsuleCollider2D stand;
-    [SerializeField] private BoxCollider2D down;
-    [SerializeField] private AudioSource running;
-    [SerializeField] private AudioSource walking;
-    [SerializeField] private AudioSource jump;
-    [SerializeField] private AudioSource slide;
-
-    private Animator anim;
+    private Animator anim; // анимации
     private Rigidbody2D rb;
-    private bool isGrounded;
-    private bool slideBro = false;
-    private bool jumpBro = false;
-    public bool CanMove = true;
+    private bool isGrounded; // проверка что чел на земле стоит
+    private bool slideBro = false; // скольжение проверка
+    private bool jumpBro = false; //прыжок проверка
+    public bool CanMove = true; // может ли двигаться
 
     private void Start()
     {
+        // у игрока все необходимые компоненты берем
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -31,6 +32,7 @@ public class Hero_norm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // обнуляем проверки для анимаций
         bool IsJumping = false;
         bool IsWalking = false;
         bool IsRunning = false;

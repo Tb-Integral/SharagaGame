@@ -94,7 +94,7 @@ public class sadnessDialog1 : MonoBehaviour
                 }
                 else if (cm.CircleMas[1] && cm.CircleMas[2])
                 {
-                    if (circleIcon.transform.localPosition.x - 1.5194717f < 1.0f)
+                    if (circleIcon.transform.localPosition.x - 31.8120117f < 1.0f)
                     {
                         cm.CircleMas[2] = cm.CircleMas[1];
                         cm.CircleMas[2].transform.localPosition += new Vector3(30.29254f, 0, 0);
