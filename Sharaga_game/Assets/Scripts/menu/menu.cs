@@ -12,6 +12,12 @@ public class menu : MonoBehaviour
         StartCoroutine(ZHOPA());
     }
 
+    public void  titri()
+    {
+        click.Play();
+        SceneManager.LoadScene("titles");
+    }
+
     public void exit()
     {
         click.Play();

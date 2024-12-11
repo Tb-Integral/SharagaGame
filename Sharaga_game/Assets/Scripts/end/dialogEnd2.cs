@@ -33,6 +33,6 @@ public class dialogEnd2 : MonoBehaviour
         }
         color.a = 1f; // Полностью прозрачный экран
         black.color = color;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("titles");
     }
 }
